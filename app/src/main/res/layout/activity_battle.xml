@@ -7,4 +7,16 @@
     android:layout_height="match_parent"
     tools:context=".BattleActivity">
 
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="63dp"
+        android:layout_height="62dp"
+        android:onClick="switchToMainActivity"
+        android:text="X"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.046" />
 </androidx.constraintlayout.widget.ConstraintLayout>

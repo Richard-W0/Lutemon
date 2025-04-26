@@ -27,4 +27,19 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, CreateLutemonActivity.class);
         startActivity(intent);
     }
+
+    public void switchToBattle(View view) {
+        Intent intent = new Intent(this, BattleActivity.class);
+        startActivity(intent);
+    }
+
+    public void switchToHome(View view) {
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+    }
+
+    public void switchToTraining(View view) {
+        Intent intent = new Intent(this, TrainingActivity.class);
+        startActivity(intent);
+    }
 }
