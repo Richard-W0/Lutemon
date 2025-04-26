@@ -33,4 +33,12 @@ public class Lutemon {
     public String getName() {
         return this.name;
     }
+
+    public static int getId(){
+        return id;
+    }
+
+    public static String getColor(){
+        return color;
+    }
 }
