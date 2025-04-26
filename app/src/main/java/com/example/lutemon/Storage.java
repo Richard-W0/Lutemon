@@ -5,12 +5,12 @@ public class Storage {
     private HashMap<Integer, Lutemon> Lutemons;
     private String name;
 
-    public Storage(String, name){
+    public Storage(String name){
         this.name = name;
         this.Lutemons = new HashMap<>();
     }
     public void addLutemon(Lutemon lutemon){
-        Lutemons.put(Lutemon.getId(), lutemon);
+        Lutemons.put(lutemon.getId(), lutemon); // voisiko lutemonin luoda suoraan tänne?
     }
 
     public Lutemon getLutemon(int id){

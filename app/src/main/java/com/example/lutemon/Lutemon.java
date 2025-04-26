@@ -10,18 +10,24 @@ public class Lutemon {
     int level;
     int experience;
     int id;
+    int wins;
+    int losses;
+    int training;
 
     public static int idCounter;
 
     public Lutemon(String name) {
         this.name = name;
         this.experience = 0;
+        this.wins = 0;
+        this.losses = 0;
+        this.training = 0;
     }
 
     public void levelUp() {
         this.level = this.level + 1;
         this.experience = 0;
-        idCounter++;
+        idCounter++; // kuuluko tän olla täällä....?
     }
 
     public int getNumberOfCreatedLutemons() {
@@ -34,11 +40,9 @@ public class Lutemon {
         return this.name;
     }
 
-    public static int getId(){
-        return id;
-    }
+    public int getId(){ return this.id; }
 
-    public static String getColor(){
-        return color;
+    public String getColor(){
+        return this.color;
     }
 }
