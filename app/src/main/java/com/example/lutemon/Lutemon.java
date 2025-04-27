@@ -16,6 +16,8 @@ public class Lutemon {
 
     public static int idCounter;
 
+    public static int idCounter;
+
     public Lutemon(String name) {
         this.name = name;
         this.experience = 0;
@@ -26,9 +28,15 @@ public class Lutemon {
     }
 
     public void levelUp() {
-        this.level = this.level + 1;
+        //this.level = this.level + 1;  smh et muista mitään ohjelmoinnin perusteist....
+        this.level++;
         this.experience = 0;
         // idCounter++; // kuuluko tän olla täällä....? --> vastaus: ei, sen id ei kasva levelin mukaan :D
+
+        this.attack += 2;    // esimerkki kasvu
+        this.defense += 2;   // esimerkki kasvu
+        this.maxHealth += 5; // esimerkki kasvu
+        this.health = maxHealth; // perus pokemon full heal level upist
     }
 
     public static int getNumberOfCreatedLutemons() {
@@ -44,4 +52,43 @@ public class Lutemon {
     public String getColor(){
         return this.color;
     }
+
+    public int attack() {
+        return this.attack;
+    }
+
+    public void takeDamage(int damage) {
+        int actualDamage = damage - this.defense;
+        if (actualDamage < 0) {
+            actualDamage = 0; // no healing the enemy by attacking lol
+        }
+        this.health -= actualDamage;
+        if (this.health < 0) {
+            this.health = 0;
+        }
+    }
+
+    public void incrementWins() {
+        this.wins++;
+    }
+
+    public void incrementLosses() {
+        this.losses++;
+    }
+
+    public void gainExperience(int exp) {
+        this.experience += exp;
+        if (this.experience >= 10) { // esimerkki level up määrä
+            levelUp();
+        }
+    }
+
+    public int getHealth() {
+        return this.health;
+    }
+
+    public int getExperience() {
+        return this.experience;
+    }
+}
 }
