@@ -14,7 +14,6 @@ public class Storage {
         this.lutemons = new HashMap<>(); // pitäiskö rajottaa olemassaolevien lutemonien määrää? mut sit pitäis olla myös käyttäjälle keino poistaa niitä....
     }
 
-    // Static method to get the single instance
     public static Storage getInstance() {
         if (storage == null) {
             storage = new Storage();

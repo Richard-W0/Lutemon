@@ -60,6 +60,9 @@ public class Lutemon {
         }
     }
 
+    public void setHealth(int health) {
+        this.health = health;
+    }
     public void incrementWins() {
         this.wins++;
     }
