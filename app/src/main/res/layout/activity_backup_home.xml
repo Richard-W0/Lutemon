@@ -5,10 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BattleActivity">
+    tools:context=".BackupHomeActivity">
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/button9"
         android:layout_width="63dp"
         android:layout_height="62dp"
         android:onClick="switchToMainActivity"
@@ -21,15 +21,14 @@
         app:layout_constraintVertical_bias="0.023" />
 
     <TextView
-        android:id="@+id/btlTxtFld"
-        android:layout_width="338dp"
-        android:layout_height="479dp"
+        android:id="@+id/ltmnList"
+        android:layout_width="380dp"
+        android:layout_height="514dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.936" />
-
+        app:layout_constraintVertical_bias="0.723" />
 </androidx.constraintlayout.widget.ConstraintLayout>

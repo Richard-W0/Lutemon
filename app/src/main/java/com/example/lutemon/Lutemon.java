@@ -32,9 +32,9 @@ public class Lutemon {
         this.experience = 0;
         // idCounter++; // kuuluko tän olla täällä....? --> vastaus: ei, sen id ei kasva levelin mukaan :D
 
-        this.attack += 2;    // esimerkki kasvu
-        this.defense += 2;   // esimerkki kasvu
-        this.maxHealth += 5; // esimerkki kasvu
+        this.attack += 1;    // esimerkki kasvu
+        this.defense += 1;   // esimerkki kasvu
+        this.maxHealth += 3; // esimerkki kasvu
         this.health = maxHealth; // perus pokemon full heal level upist
     }
 
@@ -93,5 +93,7 @@ public class Lutemon {
     public int getWins() { return this.wins; }
 
     public int getImage() { return this.image; }
+
+    public int getLevel() { return this.level; }
 }
 

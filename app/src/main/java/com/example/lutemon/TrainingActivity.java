@@ -65,6 +65,9 @@ public class TrainingActivity extends AppCompatActivity {
             selectedLutemon.gainExperience(5); // Give 5 exp for training
             selectedLutemon.training += 1; // Track trainings
             Toast.makeText(this, selectedLutemon.getName() + " gained experience from training!", Toast.LENGTH_SHORT).show();
+            if (selectedLutemon.getExperience() >= 10) {
+                selectedLutemon.levelUp();
+            }
         } else {
             Toast.makeText(this, "Error: Lutemon not found!", Toast.LENGTH_SHORT).show();
         }
