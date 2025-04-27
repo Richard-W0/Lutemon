@@ -16,13 +16,11 @@ public class Lutemon {
 
     public static int idCounter;
 
-    public static int idCounter;
-
     public Lutemon(String name) {
         this.name = name;
         this.experience = 0;
         this.wins = 0;
-        this.losses = 0;
+        this.losses = 0; // lol se jää tähän en jaksa säätää pois
         this.training = 0;
         this.id = idCounter++; // se kuuluu tänne lol
     }
@@ -91,4 +89,4 @@ public class Lutemon {
         return this.experience;
     }
 }
-}
+

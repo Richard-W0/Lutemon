@@ -1,10 +1,8 @@
 package com.example.lutemon;
 
-public class BattleField extends Storage{
+public class BattleField{
 
     public BattleField(String name){
-        this.name = name //from storage
-        this.lutemons = new Lutemon[100]
     }
 
     public void fight(Lutemon lutemon1, Lutemon lutemon2) {
@@ -31,8 +29,8 @@ public class BattleField extends Storage{
         }
 
         // after the fight
-        lutemon1.incrementBattles();
-        lutemon2.incrementBattles();
+        lutemon1.incrementWins();
+        lutemon2.incrementLosses();
 
         // experience to winner
         if (lutemon1.getHealth() > 0) {
@@ -44,4 +42,4 @@ public class BattleField extends Storage{
         }
     }
 }
-}
+
