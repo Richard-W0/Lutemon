@@ -25,7 +25,7 @@ public class LutemonMapAdapter extends RecyclerView.Adapter<LutemonViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull LutemonViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull LutemonViewHolder holder, int position) { // ei toimi koska int position ei obvs oo sen id :(
         holder.lutemonName.setText(storage.getLutemon(position).getName());
         holder.lutemonAttack.setText(storage.getLutemon(position).getAttack());
         holder.lutemonDefense.setText(storage.getLutemon(position).getDefense());

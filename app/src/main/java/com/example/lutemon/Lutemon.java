@@ -1,18 +1,19 @@
 package com.example.lutemon;
 
 public class Lutemon {
-    String name;
-    String color;
-    int health;
-    int maxHealth;
-    int attack;
-    int defense;
-    int level;
-    int experience;
-    int id;
-    int wins;
-    int losses;
-    int training;
+    protected String name;
+    protected String color;
+    protected int image;
+    protected int health;
+    protected int maxHealth;
+    protected int attack;
+    protected int defense;
+    protected int level;
+    protected int experience;
+    protected int id;
+    protected int wins;
+    protected int losses;
+    protected int training;
 
     public static int idCounter;
 

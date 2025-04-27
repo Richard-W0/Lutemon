@@ -8,5 +8,6 @@ public class Orange extends Lutemon {
         this.defense = 1;
         this.maxHealth = 17;
         this.health = this.maxHealth;
+        this.image = R.drawable.tigerface;
     }
 }

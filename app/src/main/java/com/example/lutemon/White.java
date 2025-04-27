@@ -8,5 +8,6 @@ public class White extends Lutemon {
         this.defense = 4;
         this.maxHealth = 20;
         this.health = this.maxHealth;
+        this.image = R.drawable.bunny;
     }
 }

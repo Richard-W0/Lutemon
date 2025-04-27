@@ -8,5 +8,6 @@ public class Pink extends Lutemon {
         this.defense = 2;
         this.maxHealth = 18;
         this.health = this.maxHealth;
+        this.image = R.drawable.piggy;
     }
 }
