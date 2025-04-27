@@ -34,4 +34,8 @@ public class Storage {
             System.out.println("ID: " + lutemon.getId() + ", Name: " + lutemon.getName() + ", Color: " + lutemon.getColor());
         }
     }
+
+    public int getLutemonCount() {
+        return lutemons.size();
+    }
 }

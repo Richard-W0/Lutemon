@@ -30,10 +30,8 @@ public class Lutemon {
         idCounter++; // kuuluko tän olla täällä....?
     }
 
-    public int getNumberOfCreatedLutemons() {
-        // code here
-        int i = 1; // temp koodi ettei se valita :D
-        return i;
+    public static int getNumberOfCreatedLutemons() {
+        return Storage.getInstance().getLutemonCount();
     }
 
     public String getName() {
