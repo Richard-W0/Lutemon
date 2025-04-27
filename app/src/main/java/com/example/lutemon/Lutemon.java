@@ -25,7 +25,7 @@ public class Lutemon {
         this.id = idCounter++; // se kuuluu tänne lol
     }
 
-    public void levelUp() {
+    public void levelUp() { // tää ei oo tehtävänannon mukainen.....
         //this.level = this.level + 1;  smh et muista mitään ohjelmoinnin perusteist....
         this.level++;
         this.experience = 0;
@@ -39,6 +39,32 @@ public class Lutemon {
 
     public static int getNumberOfCreatedLutemons() {
         return Storage.getInstance().getLutemonCount();
+    }
+
+    public void takeDamage(int damage) {
+        int actualDamage = damage - this.defense;
+        if (actualDamage < 0) {
+            actualDamage = 0; // no healing the enemy by attacking lol
+        }
+        this.health -= actualDamage;
+        if (this.health < 0) {
+            this.health = 0;
+        }
+    }
+
+    public void gainExperience(int exp) {
+        this.experience += exp;
+        if (this.experience >= 10) { // esimerkki level up määrä
+            levelUp();
+        }
+    }
+
+    public void incrementWins() {
+        this.wins++;
+    }
+
+    public void incrementLosses() {
+        this.losses++;
     }
 
     public String getName() {
@@ -55,40 +81,10 @@ public class Lutemon {
 
     public int getDefense() { return this.defense; }
 
-    public void takeDamage(int damage) {
-        int actualDamage = damage - this.defense;
-        if (actualDamage < 0) {
-            actualDamage = 0; // no healing the enemy by attacking lol
-        }
-        this.health -= actualDamage;
-        if (this.health < 0) {
-            this.health = 0;
-        }
-    }
+    public int getHealth() { return this.health; }
 
-    public void incrementWins() {
-        this.wins++;
-    }
+    public int getMaxHealth() { return this.maxHealth; }
 
-    public void incrementLosses() {
-        this.losses++;
-    }
-
-    public void gainExperience(int exp) {
-        this.experience += exp;
-        if (this.experience >= 10) { // esimerkki level up määrä
-            levelUp();
-        }
-    }
-
-    public int getHealth() {
-        return this.health;
-    }
-
-    public int getMaxHealth() {return this.maxHealth;}
-
-    public int getExperience() {
-        return this.experience;
-    }
+    public int getExperience() { return this.experience; }
 }
 

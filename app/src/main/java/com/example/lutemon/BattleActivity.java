@@ -30,7 +30,7 @@ public class BattleActivity extends AppCompatActivity {
     }
 
     public void fight(Lutemon lutemon1, Lutemon lutemon2) {
-        textView.setText(lutemon1.getName() + " is fighting " + lutemon2.getName() + "!");
+        textView.setText(String.format("%s is fighting %s!", lutemon1.getName(), lutemon2.getName()));
 
         // TO DO: if check että 0 hp lutemonit ei pääse tappeluun asti TAI molemmille palautetaan
         //        täys HP ennen taistelua
@@ -54,20 +54,9 @@ public class BattleActivity extends AppCompatActivity {
         }
     }
 
-    public void printLutemonInfo(Lutemon lutemon1, Lutemon lutemon2) {
-        textView.append('\n' + "1." + lutemon1.getName() + " (" + lutemon1.getColor() + ") att: " +
-                lutemon1.getAttack() + "; def: " + lutemon1.getDefense() + "; exp: " +
-                lutemon1.getExperience() + "; health: " + lutemon1.getHealth() + "/" +
-                lutemon1.getMaxHealth());
-        textView.append('\n' + "1." + lutemon2.getName() + " (" + lutemon2.getColor() + ") att: " +
-                lutemon2.getAttack() + "; def: " + lutemon2.getDefense() + "; exp: " +
-                lutemon2.getExperience() + "; health: " + lutemon2.getHealth() + "/" +
-                lutemon2.getMaxHealth());
-    }
-
     public void combat(Lutemon attacker, Lutemon defender) {
-        textView.append('\n' + attacker.getName() + " (" + attacker.getColor() + ") attacks" +
-                defender.getName() + " (" + defender.getColor() + ")");
+        textView.append('\n' + String.format("%s (%s) attacks %s (%s)!", attacker.getName(),
+                attacker.getColor(), defender.getName(), defender.getColor()));
         int damage = attacker.getAttack();
         defender.takeDamage(damage);
     }
@@ -75,8 +64,17 @@ public class BattleActivity extends AppCompatActivity {
     public void battleEnd(Lutemon victor, Lutemon loser) {
         victor.incrementWins();
         loser.incrementLosses();
-        textView.append('\n' + loser.getName() + " has been defeated by" + victor.getName() + "!");
+        textView.append('\n' + String.format("%s has been defeated by %s!", loser.getName(), victor.getName()));
         victor.gainExperience(10);
+    }
+
+    public void printLutemonInfo(Lutemon lutemon1, Lutemon lutemon2) {
+        textView.append('\n' + String.format("1: %s (%s) att: %s; def: %s; exp: %s; health: %s/%s",
+                lutemon1.getName(), lutemon1.getColor(), lutemon1.getAttack(), lutemon1.getDefense(),
+                lutemon1.getExperience(), lutemon1.getHealth(), lutemon1.getMaxHealth()));
+        textView.append('\n' + String.format("2: %s (%s) att: %s; def: %s; exp: %s; health: %s/%s",
+                lutemon2.getName(), lutemon2.getColor(), lutemon2.getAttack(), lutemon2.getDefense(),
+                lutemon2.getExperience(), lutemon2.getHealth(), lutemon2.getMaxHealth()));
     }
 
     public void switchToMainActivity(View view) {
