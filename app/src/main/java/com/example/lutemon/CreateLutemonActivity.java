@@ -39,18 +39,18 @@ public class CreateLutemonActivity extends AppCompatActivity {
         Lutemon lusikka = null;
 
         if (identity == R.id.rbBlack) {
-            Lutemon lusikka = new Black(name);
+            lusikka = new Black(name);
         } else if (identity == R.id.rbGreen) {
-            Lutemon lusikka = new Green(name);
+            lusikka = new Green(name);
 
         } else if (identity == R.id.rbPink) {
-            Lutemon lusikka = new Pink(name);
+            lusikka = new Pink(name);
 
         } else if (identity == R.id.rbWhite) {
-            Lutemon lusikka = new White(name);
-
+            lusikka = new White(name);
+
         } else if (identity == R.id.rbOrange) {
-            Lutemon lusikka = new Orange(name);
+            lusikka = new Orange(name);
 
         } else {
             // pyydä käyttäjää valitsemaan lutemonin tyyppi ensin
