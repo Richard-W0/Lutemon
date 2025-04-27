@@ -22,12 +22,13 @@ public class Lutemon {
         this.wins = 0;
         this.losses = 0;
         this.training = 0;
+        this.id = idCounter++; // se kuuluu tänne lol
     }
 
     public void levelUp() {
         this.level = this.level + 1;
         this.experience = 0;
-        idCounter++; // kuuluko tän olla täällä....?
+        // idCounter++; // kuuluko tän olla täällä....? --> vastaus: ei, sen id ei kasva levelin mukaan :D
     }
 
     public static int getNumberOfCreatedLutemons() {
