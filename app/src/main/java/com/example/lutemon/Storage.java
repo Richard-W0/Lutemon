@@ -1,4 +1,5 @@
 package com.example.lutemon;
+import java.util.Collection;
 import java.util.HashMap;
 
 public class Storage {
@@ -37,5 +38,9 @@ public class Storage {
 
     public int getLutemonCount() {
         return lutemons.size();
+    }
+
+    public Collection<Lutemon> getAllLutemons() {
+        return lutemons.values();
     }
 }

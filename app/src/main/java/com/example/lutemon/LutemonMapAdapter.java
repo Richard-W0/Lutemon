@@ -15,7 +15,7 @@ public class LutemonMapAdapter extends RecyclerView.Adapter<LutemonViewHolder> {
 
     public LutemonMapAdapter(Context context, Storage storage) {
         this.context = context;
-        this.storage = storage;
+        this.storage = Storage.getInstance();
     }
 
     @NonNull
