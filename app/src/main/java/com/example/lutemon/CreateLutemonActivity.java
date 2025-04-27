@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,9 +34,12 @@ public class CreateLutemonActivity extends AppCompatActivity {
         RadioGroup rgLutemonType = findViewById(R.id.rgLutemonType);
         int identity = rgLutemonType.getCheckedRadioButtonId();
         String name = lutemonName.getText().toString();
+        // tehään tämmönen jekku
+
+        Lutemon lusikka = null;
+
         if (identity == R.id.rbBlack) {
             Lutemon lusikka = new Black(name);
-            // miten saadaan lisättyy nää varastoon??
         } else if (identity == R.id.rbGreen) {
             Lutemon lusikka = new Green(name);
 
@@ -44,12 +48,20 @@ public class CreateLutemonActivity extends AppCompatActivity {
 
         } else if (identity == R.id.rbWhite) {
             Lutemon lusikka = new White(name);
-
+
         } else if (identity == R.id.rbOrange) {
             Lutemon lusikka = new Orange(name);
 
         } else {
             // pyydä käyttäjää valitsemaan lutemonin tyyppi ensin
+            Toast.makeText(this, "Choose a sLUTemon type first idiot", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // jos lusikka onnistuu, lisätään varastoon
+        if (lusikka != null) {
+            Storage.getInstance().addLutemon(lusikka);
+            Toast.makeText(this, "Lutemon has been created.", Toast.LENGTH_SHORT).show();
         }
     }
 
