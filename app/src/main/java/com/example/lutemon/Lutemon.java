@@ -51,9 +51,9 @@ public class Lutemon {
         return this.color;
     }
 
-    public int attack() {
-        return this.attack;
-    }
+    public int getAttack() { return this.attack; }
+
+    public int getDefense() { return this.defense; }
 
     public void takeDamage(int damage) {
         int actualDamage = damage - this.defense;
@@ -84,6 +84,8 @@ public class Lutemon {
     public int getHealth() {
         return this.health;
     }
+
+    public int getMaxHealth() {return this.maxHealth;}
 
     public int getExperience() {
         return this.experience;

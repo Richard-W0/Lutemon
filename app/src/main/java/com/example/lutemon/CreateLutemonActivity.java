@@ -35,29 +35,22 @@ public class CreateLutemonActivity extends AppCompatActivity {
         int identity = rgLutemonType.getCheckedRadioButtonId();
         String name = lutemonName.getText().toString();
         // tehään tämmönen jekku
-
         Lutemon lusikka = null;
-
         if (identity == R.id.rbBlack) {
             lusikka = new Black(name);
         } else if (identity == R.id.rbGreen) {
             lusikka = new Green(name);
-
         } else if (identity == R.id.rbPink) {
             lusikka = new Pink(name);
-
         } else if (identity == R.id.rbWhite) {
             lusikka = new White(name);
-
         } else if (identity == R.id.rbOrange) {
             lusikka = new Orange(name);
-
         } else {
             // pyydä käyttäjää valitsemaan lutemonin tyyppi ensin
             Toast.makeText(this, "Choose a sLUTemon type first idiot", Toast.LENGTH_SHORT).show();
-            return;
+            return;                                 // ^ onks tää nyt sitä vihapuhetta mistä saa miinuspisteitä?
         }
-
         // jos lusikka onnistuu, lisätään varastoon
         if (lusikka != null) {
             Storage.getInstance().addLutemon(lusikka);

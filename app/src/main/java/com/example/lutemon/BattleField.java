@@ -10,7 +10,7 @@ public class BattleField{
 
         while (lutemon1.getHealth() > 0 && lutemon2.getHealth() > 0) {
             // lutemon 1 attacks
-            int damage1 = lutemon1.attack();
+            int damage1 = lutemon1.getAttack();
             lutemon2.takeDamage(damage1);
 
             if (lutemon2.getHealth() <= 0) {
@@ -19,7 +19,7 @@ public class BattleField{
             }
 
             // lutemon 2 attacks
-            int damage2 = lutemon2.attack();
+            int damage2 = lutemon2.getAttack();
             lutemon1.takeDamage(damage2);
 
             if (lutemon1.getHealth() <= 0) {
@@ -30,7 +30,7 @@ public class BattleField{
 
         // after the fight
         lutemon1.incrementWins();
-        lutemon2.incrementLosses();
+        lutemon2.incrementLosses(); // mitä nää tekee?? laksetaaks tää automaattisesti häviöks lutemon2:lle...? :D
 
         // experience to winner
         if (lutemon1.getHealth() > 0) {
