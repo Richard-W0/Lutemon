@@ -86,5 +86,9 @@ public class Lutemon {
     public int getMaxHealth() { return this.maxHealth; }
 
     public int getExperience() { return this.experience; }
+
+    public int getLosses() { return this.losses; }
+
+    public int getWins() { return this.wins; }
 }
 

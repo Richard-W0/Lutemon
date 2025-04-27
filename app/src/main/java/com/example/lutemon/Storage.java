@@ -5,7 +5,7 @@ public class Storage {
     private static Storage storage = null;
 
     private String name;
-    private HashMap<Integer, Lutemon> lutemons;
+    private HashMap<Integer, Lutemon> lutemons; // miks sitä ei alusteta suoraan tässä vaan pitää mennä getInstance:n kautta?
 
     // Private constructor: prevents creating multiple storages
     private Storage() {
