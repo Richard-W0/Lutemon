@@ -8,7 +8,7 @@ public class Orange extends Lutemon {
         this.defense = 1;
         this.maxHealth = 17;
         this.health = this.maxHealth;
-        if (name.equals("Bibi")) {
+        if (name.equals("Bibi")) { // check if the name matches our cats :)
             this.image = R.drawable.bibi;
             this.defense = 0;
             this.attack = 10;

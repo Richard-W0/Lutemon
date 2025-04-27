@@ -1,5 +1,7 @@
 package com.example.lutemon;
 
+// outdated class that was merged into BattleActivity and remains unused - but a reminder of how far we've come...
+
 public class BattleField{
 
     public BattleField(String name){
@@ -30,7 +32,7 @@ public class BattleField{
 
         // after the fight
         lutemon1.incrementWins();
-        lutemon2.incrementLosses(); // mitä nää tekee?? laksetaaks tää automaattisesti häviöks lutemon2:lle...? :D
+        lutemon2.incrementLosses();
 
         // experience to winner
         if (lutemon1.getHealth() > 0) {
