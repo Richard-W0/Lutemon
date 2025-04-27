@@ -91,5 +91,7 @@ public class Lutemon {
     public int getLosses() { return this.losses; }
 
     public int getWins() { return this.wins; }
+
+    public int getImage() { return this.image; }
 }
 

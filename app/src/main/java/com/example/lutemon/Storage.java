@@ -10,7 +10,7 @@ public class Storage {
     // Private constructor: prevents creating multiple storages
     private Storage() {
         this.name = "Lutemon Storage";
-        this.lutemons = new HashMap<>();
+        this.lutemons = new HashMap<>(); // pitäiskö rajottaa olemassaolevien lutemonien määrää? mut sit pitäis olla myös käyttäjälle keino poistaa niitä....
     }
 
     // Static method to get the single instance

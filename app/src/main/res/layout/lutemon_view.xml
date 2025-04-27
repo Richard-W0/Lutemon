@@ -11,8 +11,8 @@
 
     <ImageView
         android:id="@+id/ltmnImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <LinearLayout

@@ -15,16 +15,28 @@
         android:text="X"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.046" />
+        app:layout_constraintVertical_bias="0.023" />
 
     <TextView
         android:id="@+id/btlTxtFld"
-        android:layout_width="336dp"
-        android:layout_height="524dp"
+        android:layout_width="338dp"
+        android:layout_height="479dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="172dp" />
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="217dp" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/fighterChoiceChips"
+        android:layout_width="339dp"
+        android:layout_height="116dp"
+        app:layout_constraintBottom_toTopOf="@+id/btlTxtFld"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9">
+
+    </com.google.android.material.chip.ChipGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

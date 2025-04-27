@@ -11,9 +11,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.chip.Chip;
+import com.google.android.material.chip.ChipGroup;
+
 public class BattleActivity extends AppCompatActivity {
 
     private TextView textView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +29,6 @@ public class BattleActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
-        textView = findViewById(R.id.btlTxtFld);
     }
 
     public void fight(Lutemon lutemon1, Lutemon lutemon2) {

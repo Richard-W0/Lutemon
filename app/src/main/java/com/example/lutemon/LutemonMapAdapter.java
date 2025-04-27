@@ -26,12 +26,13 @@ public class LutemonMapAdapter extends RecyclerView.Adapter<LutemonViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull LutemonViewHolder holder, int position) { // ei toimi koska int position ei obvs oo sen id :(
+        holder.lutemonImage.setImageResource(storage.getLutemon(position).getImage());
         holder.lutemonName.setText(storage.getLutemon(position).getName());
-        holder.lutemonAttack.setText(storage.getLutemon(position).getAttack());
-        holder.lutemonDefense.setText(storage.getLutemon(position).getDefense());
-        holder.lutemonHealth.setText(String.format("%s / %s", storage.getLutemon(position).getHealth(),
+        holder.lutemonAttack.setText("Attack" + storage.getLutemon(position).getAttack());
+        holder.lutemonDefense.setText("Defense" + storage.getLutemon(position).getDefense());
+        holder.lutemonHealth.setText(String.format("Health: %s / %s", storage.getLutemon(position).getHealth(),
                 storage.getLutemon(position).getMaxHealth()));
-        holder.lutemonExp.setText(storage.getLutemon(position).getExperience());
+        holder.lutemonExp.setText("Experience: " + storage.getLutemon(position).getExperience());
         holder.lutemonStats.setText(String.format("wins: %s | losses: %s", storage.getLutemon(position).getWins(),
                 storage.getLutemon(position).getLosses()));
     }
